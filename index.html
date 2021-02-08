@@ -14,31 +14,31 @@
   <body>
     <!--Шапка сайта-->
     <header class="page-header">
-      <div class="head">
-        <nav class="navigation">
-        <a class="logo-blue" href="./index.html">Web<span class="logo-black">Studio</span>
+      <div class="page-header__container">
+        <a class="logo-blue" href="./index.html">Web<span class="logo-dark">Studio</span>
         </a>
+        <nav class="nav">
             <ul class="site-nav">
-              <li class="item">
-                <a class="header-link current" href="./index.html">Студия</a>
+              <li class="site-nav__item">
+                <a class="site-nav__link current" href="./index.html">Студия</a>
               </li>
-              <li class="item">
-                <a class="header-link" href="./portfolio.html">Портфолио</a>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./portfolio.html">Портфолио</a>
               </li>                
-              <li class="item">
-                <a class="header-link" href="#">Контакты</a>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Контакты</a>
               </li>
             </ul>
         </nav>
 
         <ul class="adrress-header">
-            <li class="mail-link"><a class="adrress" href="mailto:info@example.com">
-              <svg class="mail-svg" width="16px" height="12px">
+            <li class="adrress-header__mail"><a class="adrress-header__link" href="mailto:info@example.com">
+              <svg class="adrress-header__icon-mail" width="16px" height="12px">
                 <use href="./images/symbol-defs.svg#envelope-2"></use>
               </svg>info@devstudio.com</a></li>
-            <li class="mail-link"><a class="adrress" href="tel:+380991111111">
-              <svg class="phone-svg" width="10" height="16">
-                <use href="./images/symbol-defs.svg#smartphone"></use>
+            <li class="adrress-header__mail"><a class="adrress-header__link" href="tel:+380991111111">
+              <svg class="adrress-header__icon-phone" width="10" height="16">
+                <use href="./images/symbol-defs.svg#sxsmartphone"></use>
               </svg>+38 096 111 11 11</a></li>
         </ul>
       </div>
@@ -48,10 +48,10 @@
 
       <!--Герой-->
         <section class="hero">
-          <div class="overlay">
-            <div class="heading-container">
-            <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <button type="button" class="button" data-open-modal>Заказать услугу</button>
+          <div class="hero-overlay">
+            <div class="hero-container">
+            <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+            <button type="button" class="hero__button" data-open-modal>Заказать услугу</button>
             </div>
         </div>
         </section>
@@ -62,50 +62,50 @@
         <div class="container">
           <h2 class="visually-hidden">Наши особенности</h2>
             <ul class="feature-list">
-              <li class="feature-benefits icon-antenna">
-                <div class="feature-svg">
-                  <svg class="item-svg">
+              <li class="feature-list__benefits">
+                <div class="feature-list__icon">
+                  <svg class="feature-list__item">
                     <use href="./images/symbol-defs.svg#antenna"></use>
                   </svg>
                 </div>
-                <h3 class="title">Внимание к деталям</h3>
-                <p class="feature-list-description">
+                <h3 class="feature-list__title">Внимание к деталям</h3>
+                <p class="feature-list__description">
                 Идейные соображения, а также начало повседневной работы по
                   формированию позиции.
                 </p>
             </li>
-            <li class="feature-benefits icon-clock">
-              <div class="feature-svg">
-                <svg class="item-svg">
+            <li class="feature-list__benefits">
+              <div class="feature-list__icon">
+                <svg class="feature-list__item">
                   <use href="./images/symbol-defs.svg#clock"></use>
                 </svg>
               </div>
-              <h3 class="title">Пунктуальность</h3>
-              <p class="feature-list-description">
+              <h3 class="feature-list__title">Пунктуальность</h3>
+              <p class="feature-list__description">
                 Задача организации, в особенности же рамки и место обучения кадров
                 влечет за собой.
               </p>
             </li>
-            <li class="feature-benefits icon-diagrama">
-              <div class="feature-svg">
-                <svg class="item-svg">
+            <li class="feature-list__benefits">
+              <div class="feature-list__icon">
+                <svg class="feature-list__item">
                   <use href="./images/symbol-defs.svg#diagram"></use>
                 </svg>
               </div>
-              <h3 class="title">Планирование</h3>
-              <p class="feature-list-description">
+              <h3 class="feature-list__title">Планирование</h3>
+              <p class="feature-list__description">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
-            <li class="feature-benefits icon-astronaut">
-              <div class="feature-svg">
-                <svg class="item-svg">
+            <li class="feature-list__benefits">
+              <div class="feature-list__icon">
+                <svg class="feature-list__item">
                   <use href="./images/symbol-defs.svg#astronaut"></use>
                 </svg>
               </div>
-              <h3 class="title">Современние техноголии</h3>
-              <p class="feature-list-description">
+              <h3 class="feature-list__title">Современние техноголии</h3>
+              <p class="feature-list__description">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -115,7 +115,7 @@
       </section>
 
       <!--Чем мы занимаемся-->
-      <section class="employment-section">
+      <section class="occupation-section">
         <div class="container">
           <h2 class="employment-title">Чем мы занимаемся</h2>
           <ul class="employment">
