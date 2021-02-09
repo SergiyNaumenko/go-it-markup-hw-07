@@ -486,8 +486,9 @@ p {
     background-color: var(--background-secondary-color);
 }
 
-.occupation-title,
-.team__heading {
+.occupation-heading,
+.team__heading,
+.client__heading {
     display: block;
     margin-bottom: 50px;
 
@@ -573,32 +574,16 @@ p {
 .social__icon {
     fill: currentColor;
 }
-.position{
+/* .position{
     display: flex;
     align-items: baseline;
-}
+} */
 
 /* Постоянные клиенты */
 
-.client-heading {
-    display: block;
-    margin-bottom: 50px;
-
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: var(--title-text-color);
-}
-
-.client-icon {
+.client__list {
     display: flex;
     justify-content: space-around;
-}
-
-.list {
     list-style: none;
     padding-left: 0;
     padding-right: 0;
@@ -606,22 +591,16 @@ p {
     margin-bottom: 0;
 }
 
-.client-container {
+.client__container {
     width: 170px;
     height: 90px;
 }
 
-.client-container:not(:last-child) {
+.client__container:not(:last-child) {
     margin-right: 30px;
 }
 
-.client-link:focus,
-.client-link:hover {
-    fill: var(--accent-color);
-    border: 1px solid var(--accent-color);
-}
-
-.client-link {
+.client__link {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -629,16 +608,19 @@ p {
     height: 100%;
     border: 1px solid #afb1b8;
     border-radius: 4px;
+
     fill: var(--icon-main-color);
     
     transition: var(--animation-duration) var(--animation-type);
 }
 
-/* Футер */
-
-.footer-apendix {
-    margin-bottom: 20px;
+.client__link:focus,
+.client__link:hover {
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
+
+/* Футер */
 
 .footer {
     padding-top: 60px;
@@ -646,9 +628,17 @@ p {
     background-color: var(--background-hero-footer-color);
 }
 
+.footer-info {
+    display: flex;
+    align-items: baseline;
+}
+
 .adrress-footer .adrress-item:not(:last-child) {
     margin-bottom: 9px;
-    
+}
+
+.footer-apendix {
+    margin-bottom: 20px;
 }
 
 .socials-footer {
@@ -841,10 +831,7 @@ p {
 
 .paragraf-text {
     position: absolute;
-    
     display: flex;
-
-    color: var(--hero-text-color);
     width: 322px;
     height: 168px;
     top: 63px;
@@ -856,6 +843,8 @@ p {
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
+
+    color: var(--hero-text-color);
 }
 
 .master-photo:hover .paragraf-text,
