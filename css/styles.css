@@ -73,6 +73,11 @@ p {
 	margin: 0 auto;
 }
 
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 
 /* Header */
 
@@ -326,13 +331,7 @@ p {
     letter-spacing: 0.03em;
 }
 
-/* Feature-list */
-
-
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-} 
+/* Feature-list */ 
 
 .feature-list {
     display: flex;
@@ -393,10 +392,6 @@ p {
 .occupation-section {
     padding-top: 0;
     padding-bottom: 94px;
-}
-
-.container {
-    display: block;
 }
 
 .occupation {
@@ -672,22 +667,17 @@ p {
 
 /* Butoons */
 
-.portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.filter-item {
+.filter-set{
 	display: flex;
 	justify-content: center;
     margin-bottom: 34px;
 }
 
-.filter-list:not(:last-child) {
+.filter-set__item:not(:last-child) {
     margin-right: 8px;
 }
 
-.filter-btn{
+.filter-set__btn {
     padding: 6px 22px;
 
     align-items: baseline;
@@ -709,8 +699,8 @@ p {
     transition: background-color var(--animation-duration) var(--animation-type);
 }
 
-.filter-btn:hover,
-.filter-btn:focus{
+.filter-set__btn:hover,
+.filter-set__btn:focus{
     color: var(--hero-text-color);
     background-color: var(--accent-color-card);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
@@ -719,12 +709,6 @@ p {
 }
 
                 /* All offers */
- 
-.joboffer {   
-    width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
 
 .offers-list { 
     display: flex;
