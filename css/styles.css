@@ -487,7 +487,7 @@ p {
 }
 
 .occupation-title,
-.team-heading {
+.team__heading {
     display: block;
     margin-bottom: 50px;
 
@@ -506,11 +506,7 @@ p {
     border-radius: 0px;
 }
 
-.social .distance:not(:last-child) {
-    margin-right: 10px;
-}
-
-.team-card {
+.team-list__card {
     height: 428px;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 
@@ -520,11 +516,11 @@ p {
     background-color: #ffffff;
     }
 
-.card-face {
+.team-list__face {
     margin-bottom: 30px;
 }
 
-.team-list .person {
+.team-list__person {
     margin-bottom: 10px;
 
     font-weight: 500;
@@ -536,7 +532,7 @@ p {
     color: var(--title-text-color);
 }
 
-.duties {
+.team-list__details {
     margin-bottom: 10px;
     font-weight: normal;
     font-size: 16px;
@@ -550,13 +546,17 @@ p {
     justify-content: center;
 }
 
-.master-icon:focus,
-.master-icon:hover {
+.social__distance:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social__master:focus,
+.social__master:hover {
     background-color: var(--accent-color);
     color: var(--hero-text-color);
 }
 
-.master-icon {
+.social__master {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -570,7 +570,7 @@ p {
     transition: background-color var(--animation-duration) var(--animation-type)
 }
 
-.icon-social {
+.social__icon {
     fill: currentColor;
 }
 .position{
@@ -582,7 +582,6 @@ p {
 
 .client-heading {
     display: block;
-    margin-top: 94px;
     margin-bottom: 50px;
 
     font-weight: 700;
@@ -597,7 +596,6 @@ p {
 .client-icon {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 94px;
 }
 
 .list {
