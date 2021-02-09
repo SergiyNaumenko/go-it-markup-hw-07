@@ -437,22 +437,22 @@ p {
     display: block;
 }
 
-.employment {
+.occupation {
     
     display: flex;
     justify-content: space-between;
 }
 
-.employment .item {
+.occupation__item {
     position: relative;
     width: 370px;
 }
 
-.employment-overlay::before {
+.occupation__overlay::before {
     position: absolute;
 }
 
-.employment-overlay {
+.occupation__overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -464,7 +464,7 @@ p {
     background: rgba(47, 48, 58, 0.8);
 }
 
-.employment-text {
+.occupation__text {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -486,7 +486,7 @@ p {
     background-color: var(--background-secondary-color);
 }
 
-.employment-title,
+.occupation-title,
 .team-heading {
     display: block;
     margin-bottom: 50px;
