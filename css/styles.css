@@ -199,26 +199,11 @@ p {
     margin-left: auto;
 }
 
-.adrress-header__link{
-    position: relative;
-
-    transition: color var(--animation-duration) var(--animation-type);
-}
-
-.adrress-header__link::after {
-    content: '';
-    opacity: 0;
-    transition: opacity var(--animation-duration) var(--animation-type);
-}
-
-.adrress-header__link:hover:after {
-    opacity: 1;
-}
-
 .adrress-header__link,
-.adrress-header__link {
+.adrress-footer__link {
     fill: var(--primary-text-color);
     color: var(--primary-text-color);
+    transition: color var(--animation-duration) var(--animation-type);
 }
 
 .adrress-header__link {
@@ -234,8 +219,8 @@ p {
 
 .adrress-header__link:hover,
 .adrress-header__link:focus,
-.adrress-header__link:hover,
-.adrress-header__link:focus{
+.adrress-footer__link:hover,
+.adrress-footer__link:focus{
     color: var(--accent-color);
     fill: currentColor;
 }
@@ -246,29 +231,6 @@ p {
 
 .adrress-header__mail:not(:last-child) { 
     margin-right: 30px;
-}
-
-.adrress-post {
-    margin-top: 20px;
-    margin-bottom: 9px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-
-    color: var(--hero-text-color);
-}
-
-.adrress-footer {
-    margin-bottom: 9px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
 }
 
 /* Hero */
@@ -574,10 +536,6 @@ p {
 .social__icon {
     fill: currentColor;
 }
-/* .position{
-    display: flex;
-    align-items: baseline;
-} */
 
 /* Постоянные клиенты */
 
@@ -625,6 +583,7 @@ p {
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
+
     background-color: var(--background-hero-footer-color);
 }
 
@@ -633,8 +592,33 @@ p {
     align-items: baseline;
 }
 
-.adrress-footer .adrress-item:not(:last-child) {
+.footer-contacts {
+    margin-right: 70px;
+}
+
+.footer-adrress {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.footer-adrress__item:not(:last-child) {
     margin-bottom: 9px;
+}
+
+.adrress-post {
+    margin-top: 20px;
+    margin-bottom: 9px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: var(--hero-text-color);
 }
 
 .footer-apendix {
@@ -643,8 +627,8 @@ p {
 
 .socials-footer {
     display: block;
-    margin-left: 70px;
     align-items: center;
+
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
