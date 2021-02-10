@@ -1,0 +1,1116 @@
+@import 'utils/variables';
+
+body {
+    font-family: $main-font-family;
+
+    color: $primary-text-color;
+}
+
+h1, 
+h2, 
+h3 {
+    font-family: $main-font-family;
+    font-weight: 900;
+}
+
+main {
+    // background-color: $background-main-color;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1, 
+h2,
+h3,
+ul,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+/* Common */
+
+.container {
+    display: block;
+    align-items: center;
+
+    width: 1200px;
+    padding: 0 15px;
+	margin: 0 auto;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+/* Header */
+
+.page-header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* z-index: 1; */
+    
+    border-bottom: 1px solid $background-secondary-color;
+
+    background-color: $background-head-color;
+}
+
+.page-header__container {
+    display: flex;
+    align-items: center;
+
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.address-header__icon-mail,
+.address-header__icon-phone {
+    margin-right: 10px;
+}
+
+.address:focus {
+    fill: $accent-color
+}
+    
+/* Logo */
+
+.logo-blue {
+    margin-right: 95px;
+
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+
+    color: $accent-color;
+}
+.logo-dark {
+    color: $title-text-color;
+}
+.logo-white {
+    color: $hero-text-color;
+}
+
+/* Site-nav */
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.site-nav__link {
+    display: inline;
+    padding: 32px 0;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14px;
+    letter-spacing: 0.02em;
+
+    color: $title-text-color;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus{
+    color: $accent-color;
+}
+
+.site-nav__link.current {
+    color: $accent-color;
+}
+
+/* Оформлення підкреслення в хедері */
+
+.site-nav__link{
+    position: relative;
+    transition: color $animation-duration $animation-type;
+}
+
+.site-nav__link::after {
+    content: '';
+
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+    background-color: $accent-color;
+    opacity: 0;
+
+    transition: opacity $animation-duration $animation-type;
+}
+.current.site-nav__link:after,
+.site-nav__link:hover:after {
+    opacity: 1;
+}
+
+/* Address effect */
+
+.address-header {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.address-header__link,
+.address-footer__link {
+    fill: $primary-text-color;
+    color: $primary-text-color;
+    transition: color $animation-duration $animation-type;
+}
+
+.address-header__link {
+    display: inline-block;
+    padding: 32px 0;
+    
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+}
+
+.address-header__link:hover,
+.address-header__link:focus,
+.address-footer__link:hover,
+.address-footer__link:focus{
+    color: $accent-color;
+    fill: currentColor;
+}
+
+.address-header__mail {
+    margin-left: auto;
+}
+
+.address-header__mail:not(:last-child) { 
+    margin-right: 30px;
+}
+
+/* Hero */
+
+.hero {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+
+    background-color: $background-hero-color;
+}
+
+/* Ставить картинку на героя */
+
+.hero-overlay {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)
+        ), url(../images/hero-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.hero__title {
+    margin: 0 auto 30px;
+    
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: $hero-text-color;
+}
+
+.hero-container {
+    width: 696px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+/* Button */
+
+.hero__button {
+    padding: 10px 32px;
+    min-width: 200px;
+    align-items: baseline;
+    text-align: center; 
+    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    color: $hero-text-color; 
+    background-color: $accent-color;
+}
+
+.button:hover,
+.button:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Section*/
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+.title-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+/* Feature-list */ 
+
+.feature-list {
+    display: flex;
+}
+
+.feature-list__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 25px 0px;
+    background-color: $background-secondary-color;
+    border-radius: 4px;
+}
+
+.feature-list__item {
+  
+    width: 70px;
+    height: 70px;
+}
+.feature-list__benefits:not(:nth-child(4n)) {
+    margin-right: 30px;
+}
+
+.feature-list__benefits {
+    width: calc((1170px - 90px) / 4);
+}
+
+.icon-benefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: $background-secondary-color;
+}
+
+.feature-list__title {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $title-text-color;
+}
+
+.feature-list__description {
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+}
+
+/* Occupation */
+
+.occupation-section {
+    padding-top: 0;
+    padding-bottom: 94px;
+}
+
+.occupation {
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.occupation__item {
+    position: relative;
+    width: 370px;
+}
+
+.occupation__overlay::before {
+    position: absolute;
+}
+
+.occupation__overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $hero-text-color;
+    background: rgba(47, 48, 58, 0.8);
+}
+
+.occupation__text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.product-overlay {
+    position: relative;
+    display: flex;
+}
+
+/* Our-team */
+
+.team-section {
+    background-color: $background-secondary-color;
+}
+
+.occupation-heading,
+.team__heading,
+.client__heading {
+    display: block;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $title-text-color;
+}
+
+.team-list {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0px;
+}
+
+.team-list__card {
+    height: 428px;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    }
+
+.team-list__face {
+    margin-bottom: 30px;
+}
+
+.team-list__person {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $title-text-color;
+}
+
+.team-list__details {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social__distance:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social__master:focus,
+.social__master:hover {
+    background-color: $accent-color;
+    color: $hero-text-color;
+}
+
+.social__master {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    background-color: #FFFFFF;
+    color: $icon-main-color;
+
+    transition: background-color $animation-duration $animation-type
+}
+
+.social__icon {
+    fill: currentColor;
+}
+
+/* Постоянные клиенты */
+
+.client__list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.client__container {
+    width: 170px;
+    height: 90px;
+}
+
+.client__container:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    fill: $icon-main-color;
+    
+    transition: $animation-duration $animation-type;
+}
+
+.client__link:focus,
+.client__link:hover {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+}
+
+/* Футер */
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $background-hero-footer-color;
+}
+
+.footer-info {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-contacts {
+    margin-right: 70px;
+}
+
+.footer-address {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.footer-address__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address-post {
+    margin-top: 20px;
+    margin-bottom: 9px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: $hero-text-color;
+}
+
+.footer-appendix {
+    margin-bottom: 20px;
+}
+
+.socials-footer {
+    display: block;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $hero-text-color;
+}
+
+.master-social:hover,
+.master-social:focus {
+    background-color: $accent-color;
+    color: $hero-text-color;
+}
+
+.socials-link {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.socials-link .roster:not(:last-child) {
+    margin-right: 10px;
+}
+
+.master-social {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $hero-text-color;
+
+    transition: background-color $animation-duration $animation-type
+}
+
+                /* Стили для portfolio.html */
+
+/* Buttons */
+
+.filter-set{
+	display: flex;
+	justify-content: center;
+    margin-bottom: 34px;
+}
+
+.filter-set__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.filter-set__btn {
+    padding: 6px 22px;
+
+    align-items: baseline;
+
+    cursor: pointer;
+    border-style: none;
+    border-radius: 4px;
+    min-width: 73px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $title-text-color;
+    background-color: $background-secondary-color;
+
+    transition: background-color $animation-duration $animation-type;
+}
+
+.filter-set__btn:hover,
+.filter-set__btn:focus{
+    color: $hero-text-color;
+    background-color: $accent-color-card;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                0px 1px 2px rgba(0, 0, 0, 0.08), 
+                0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-list { 
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: $title-text-color;
+} 
+
+.portfolio-title {
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: $title-text-color;
+}
+
+/* Оверлей та анімація для карток */
+
+.master-photo {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-list__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    background-color:$accent-color-card;
+
+    transition: transform $animation-duration $animation-type;
+
+    transform: translateY(100%);
+}
+
+.portfolio-list__item:hover .portfolio-list__overlay {
+    transform: translateY(0);
+}
+
+.portfolio-list__link:focus .portfolio-list__overlay {
+    transform: translateY(0);
+}
+
+.portfolio-list .portfolio-list__item {
+    width: 370px;
+
+    outline: 1px solid #eeeeee;
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    background-color: #fff;
+}
+
+.portfolio-list .portfolio-list__item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.portfolio-list .portfolio-list__item:nth-last-child(-n +3) {
+    margin-bottom: 0;
+}
+.portfolio-list a,
+.portfolio-list img {
+    display: block;
+}
+
+.heading {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+
+    color: $primary-text-color;
+}    
+.portfolio-list__link:focus,
+.portfolio-list__link:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+                0px 4px 4px rgba(0, 0, 0, 0.06), 
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-list__link .offers-info {
+    padding: 20px 24px;
+}
+
+/* Card text */
+
+.portfolio-list__text {
+    position: absolute;
+    
+    display: flex;
+
+    color: $hero-text-color;
+    width: 322px;
+    height: 168px;
+    top: 63px;
+    right: 24px;
+    bottom: 63px;
+    left: 24px;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+}
+
+.master-photo:hover .portfolio-list__text,
+.master-photo:focus .portfolio-list__text {
+    opacity: 1;
+}
+
+
+/* Бекдроп для Студії */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-window {
+    box-sizing: border-box;
+    width: 528px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: $background-head-color;
+}
+
+.modal-close-button {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $background-head-color;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color $animation-duration $animation-type;
+}
+
+.icon-modal-close {
+    fill: currentColor;
+}
+
+.modal-close-button:focus,
+.modal-close-button:hover {
+    cursor: pointer;
+    color: $accent-color;
+    fill: $accent-color;
+}
+
+/* Розмітка модалки */
+
+.modal-title {
+    margin-bottom: 30px;
+
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $title-text-color;
+}
+
+.submit-button {  
+    justify-content: center;     
+    text-align: center;
+    min-width: 200px;
+    
+    padding: 10px 32px;
+    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+
+    color: $hero-text-color; 
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button-position {
+    display: flex;
+    justify-content: center;
+}
+
+.form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+/* .form-field input { */
+
+.form-input  {
+    padding-left: 35px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: fill $animation-duration $animation-type;
+}
+
+.form-coment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    height: 120px;
+}   
+
+textarea {
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.input-comment {
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: $title-text-color;
+}
+
+.label-field {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.2;
+    color: $primary-text-color;
+}
+
+.checkbox-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.checkbox-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    border: 2px solid $title-text-color;
+    border-radius: 2px;
+}
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox:checked + .checkbox-icon {
+    border-color: $accent-color;
+    background-color: $accent-color;
+    background-image: url(../images/full-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.checkbox-field:focus-within>.checkbox-icon {
+    border-color: $accent-color;
+}
+
+.agreement-link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: $accent-color;
+}
+
+.label-checkbox {
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+}
+
+.icon-modal-close {
+    fill: currentColor;
+}
+
+.input-icon {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 10px;
+}
+
+.form-field:focus-within>.input-icon {
+    fill: $accent-color;
+}
+
+/* Блок для підписки */
+
+.subscribe-container {
+    margin-left: auto;
+    align-items: center;
+}
+.form {
+    display: inline-block;
+    width: 100%;
+}
+
+.subscribe-label {
+    margin-bottom: 20px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $hero-text-color;
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    padding-left: 16px;
+    border-radius: 4px;
+
+    background-color: transparent;
+    color: $hero-text-color;
+
+    transition-property: border;
+    transition: transform $animation-duration;
+}
+
+.subscribe-button {
+    display: flex;
+    align-items: center;  
+    justify-content: center;     
+    text-align: center;
+    min-width: 200px;
+
+    padding: 10px 32px;
+    margin-left: 12px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+        
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    color: $hero-text-color; 
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
+    transition-timing-function: $animation-type; 
+    transition: background-color $animation-duration $animation-type;
+    }
+
+.subscribe-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 10px;
+}
+
+.subscribe-input:placeholder-shown {
+    font-size: 16px;
+    line-height: 1.25;
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+}
+
