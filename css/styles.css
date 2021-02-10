@@ -101,12 +101,12 @@ p {
     margin: 0 auto;
 }
 
-.adrress-header__icon-mail,
-.adrress-header__icon-phone {
+.address-header__icon-mail,
+.address-header__icon-phone {
     margin-right: 10px;
 }
 
-.adrress:focus {
+.address:focus {
     fill: var(--accent-color)
 }
     
@@ -196,22 +196,22 @@ p {
     opacity: 1;
 }
 
-/* Adrress effect */
+/* Address effect */
 
-.adrress-header {
+.address-header {
     display: flex;
     align-items: center;
     margin-left: auto;
 }
 
-.adrress-header__link,
-.adrress-footer__link {
+.address-header__link,
+.address-footer__link {
     fill: var(--primary-text-color);
     color: var(--primary-text-color);
     transition: color var(--animation-duration) var(--animation-type);
 }
 
-.adrress-header__link {
+.address-header__link {
     display: inline-block;
     padding: 32px 0;
     
@@ -222,19 +222,19 @@ p {
     letter-spacing: 0.02em;
 }
 
-.adrress-header__link:hover,
-.adrress-header__link:focus,
-.adrress-footer__link:hover,
-.adrress-footer__link:focus{
+.address-header__link:hover,
+.address-header__link:focus,
+.address-footer__link:hover,
+.adrdess-footer__link:focus{
     color: var(--accent-color);
     fill: currentColor;
 }
 
-.adrress-header__mail {
+.address-header__mail {
     margin-left: auto;
 }
 
-.adrress-header__mail:not(:last-child) { 
+.address-header__mail:not(:last-child) { 
     margin-right: 30px;
 }
 
@@ -591,7 +591,7 @@ p {
     margin-right: 70px;
 }
 
-.footer-adrress {
+.footer-address {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -599,11 +599,11 @@ p {
     letter-spacing: 0.03em;
 }
 
-.footer-adrress__item:not(:last-child) {
+.footer-address__item:not(:last-child) {
     margin-bottom: 9px;
 }
 
-.adrress-post {
+.address-post {
     margin-top: 20px;
     margin-bottom: 9px;
 
@@ -616,7 +616,7 @@ p {
     color: var(--hero-text-color);
 }
 
-.footer-apendix {
+.footer-appendix {
     margin-bottom: 20px;
 }
 
@@ -665,7 +665,7 @@ p {
 
                 /* Стили для portfolio.html */
 
-/* Butoons */
+/* Buttons */
 
 .filter-set{
 	display: flex;
@@ -793,7 +793,7 @@ p {
 
     color: var(--primary-text-color);
 }    
-.portfolio-list__linkk:focus,
+.portfolio-list__link:focus,
 .portfolio-list__link:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
                 0px 4px 4px rgba(0, 0, 0, 0.06), 
@@ -860,7 +860,7 @@ p {
     background-color: var(--background-head-color);
 }
 
-.modal-close-buttom {
+.modal-close-button {
     position: absolute;
 
     top: 8px;
@@ -883,8 +883,8 @@ p {
     fill: currentColor;
 }
 
-.modal-close-buttom:focus,
-.modal-close-buttom:hover {
+.modal-close-button:focus,
+.modal-close-button:hover {
     cursor: pointer;
     color: var(--accent-color);
     fill: var(--accent-color);
@@ -938,7 +938,7 @@ p {
 
 }
 
-.form-lable {
+.form-label {
     position: absolute;
     top: 50%;
     left: 15px;
@@ -1067,7 +1067,7 @@ letter-spacing: 0.03em;
     width: 100%;
 }
 
-.subscribe-lable {
+.subscribe-label {
     margin-bottom: 20px;
     display: inline-block;
     font-weight: bold;
