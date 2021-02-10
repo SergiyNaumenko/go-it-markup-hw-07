@@ -225,7 +225,7 @@ p {
 .address-header__link:hover,
 .address-header__link:focus,
 .address-footer__link:hover,
-.adrdess-footer__link:focus{
+.address-footer__link:focus{
     color: var(--accent-color);
     fill: currentColor;
 }
@@ -1027,7 +1027,7 @@ textarea {
     border-color: var(--accent-color);
 }
 
-.ageement-link {
+.agreement-link {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -1035,7 +1035,7 @@ textarea {
     color: var(--accent-color);
 }
 
-.label-chekbox {
+.label-checkbox {
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
